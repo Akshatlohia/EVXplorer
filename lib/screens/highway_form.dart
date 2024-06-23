@@ -22,6 +22,9 @@ class _FormScreenState extends State<HighwayFormScreen> {
       appBar: AppBar(
         title: Text("EV Charger Form"),
         centerTitle: true,
+        backgroundColor: Colors.white,
+        foregroundColor: Color(0xff009E63),
+        elevation: 0,
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.all(16.0),
@@ -37,6 +40,7 @@ class _FormScreenState extends State<HighwayFormScreen> {
                   cityName = value!;
                 },
               ),
+              SizedBox(height: 16),
               TextFormField(
                 decoration: InputDecoration(
                   labelText: "Maximum Value of Slow Charger",
@@ -47,6 +51,7 @@ class _FormScreenState extends State<HighwayFormScreen> {
                   maxSlowChargerValue = double.parse(value!);
                 },
               ),
+              SizedBox(height: 16),
               TextFormField(
                 decoration: InputDecoration(
                   labelText: "Maximum Value of Fast Charger",
@@ -57,6 +62,7 @@ class _FormScreenState extends State<HighwayFormScreen> {
                   maxFastChargerValue = double.parse(value!);
                 },
               ),
+              SizedBox(height: 16),
               TextFormField(
                 decoration: InputDecoration(
                   labelText: "Price of Fast Charger",
@@ -67,6 +73,7 @@ class _FormScreenState extends State<HighwayFormScreen> {
                   priceFastCharger = double.parse(value!);
                 },
               ),
+              SizedBox(height: 16),
               TextFormField(
                 decoration: InputDecoration(
                   labelText: "Price of Slow Charger",
@@ -77,6 +84,7 @@ class _FormScreenState extends State<HighwayFormScreen> {
                   priceSlowCharger = double.parse(value!);
                 },
               ),
+              SizedBox(height: 16),
               TextFormField(
                 decoration: InputDecoration(
                   labelText: "Initial State of Charge",
@@ -87,6 +95,7 @@ class _FormScreenState extends State<HighwayFormScreen> {
                   initialStateOfCharge = double.parse(value!);
                 },
               ),
+              SizedBox(height: 16),
               TextFormField(
                 decoration: InputDecoration(
                   labelText: "Congestion Limit",
@@ -101,6 +110,12 @@ class _FormScreenState extends State<HighwayFormScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
+                  TextButton(
+                    onPressed: () {
+                      _formKey.currentState!.reset();
+                    },
+                    child: Text("Reset"),
+                  ),
                   ElevatedButton(
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
@@ -109,12 +124,6 @@ class _FormScreenState extends State<HighwayFormScreen> {
                       }
                     },
                     child: Text("Submit"),
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      _formKey.currentState!.reset();
-                    },
-                    child: Text("Reset"),
                   ),
                 ],
               ),

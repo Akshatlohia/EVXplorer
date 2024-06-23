@@ -5,8 +5,7 @@ import 'screens/highway_form.dart';
 class Homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Scaffold(
+    return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
         centerTitle: true,
@@ -122,6 +121,6 @@ class Homepage extends StatelessWidget {
           ],
         ),
       ),
-    ));
+    );
   }
 }
