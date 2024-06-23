@@ -10,15 +10,12 @@ class Homepage extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.white,
-        title: Hero(
-          tag: 'EV',
-          child: Text(
-            "EVXplorer",
-            style: TextStyle(
-              fontSize: 30.0,
-              fontWeight: FontWeight.bold,
-              // color: Color(0xff009E63),
-            ),
+        title: Text(
+          "EVXplorer",
+          style: TextStyle(
+            fontSize: 30.0,
+            fontWeight: FontWeight.bold,
+            // color: Color(0xff009E63),
           ),
         ),
       ),
