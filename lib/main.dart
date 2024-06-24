@@ -14,35 +14,54 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Color(0xff009E63),
+        primaryColor: Color(0xff14330A),
         scaffoldBackgroundColor: Colors.white,
         colorScheme: ColorScheme.fromSwatch().copyWith(
-          primary: Color(0xff009E63),
+          primary: Color(0xff14330A),
           secondary: Colors.greenAccent,
         ),
         inputDecorationTheme: InputDecorationTheme(
+          // focusColor: Colors.red,
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8.0),
             borderSide: BorderSide(
-              color: Color(0xff009E63),
+              color: Color(0xff14330A),
             ),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8.0),
             borderSide: BorderSide(
-              color: Color(0xff009E63),
+              color: Color(0xff14330A),
+            ),
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8.0),
+            borderSide: BorderSide(
+              color: Color(0xff14330A).withOpacity(0.3),
+            ),
+          ),
+          errorBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8.0),
+            borderSide: BorderSide(
+              color: Color(0xff14330A),
+            ),
+          ),
+          focusedErrorBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8.0),
+            borderSide: BorderSide(
+              color: Color(0xff14330A),
             ),
           ),
           labelStyle: TextStyle(
-            color: Color(0xff009E63),
+            color: Color(0xff14330A),
           ),
           suffixStyle: TextStyle(
-            color: Color(0xff009E63),
+            color: Color(0xff14330A),
           ),
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ButtonStyle(
-            backgroundColor: WidgetStateProperty.all(Color(0xff009E63)),
+            backgroundColor: WidgetStateProperty.all(Color(0xff14330A)),
             foregroundColor: WidgetStateProperty.all(Colors.white),
             shape: WidgetStateProperty.all(
               RoundedRectangleBorder(
@@ -53,7 +72,7 @@ class MyApp extends StatelessWidget {
         ),
         textButtonTheme: TextButtonThemeData(
           style: ButtonStyle(
-            foregroundColor: WidgetStateProperty.all(Color(0xff009E63)),
+            foregroundColor: WidgetStateProperty.all(Color(0xff14330A)),
           ),
         ),
       ),
